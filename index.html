@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChambeaYA - Find shifts near you</title>  
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/assets/styles/style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">ChambeaYA</div>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#" data-i18n="nav_home">Home</a></li>
+                <li><a href="#" data-i18n="nav_services">Services</a></li>
+                <li><a href="#" data-i18n="nav_how">How it Works</a></li>
+                <li><a href="#" data-i18n="nav_pricing">Pricing</a></li>
+                <li><a href="#" data-i18n="nav_login">Login</a></li>
+                <li><a href="#" class="btn-primary" data-i18n="nav_get_started">Get Started</a></li>
+                <li><button class="btn-primary btn-lang" id="lang-switch">ES / EN</button></li>
+            </ul>
+            <div class="nav-auth" id="nav-auth-desktop">
+                <a href="#" data-i18n="nav_login">Login</a>
+                <a href="#" class="btn-primary" data-i18n="nav_get_started">Get Started</a>
+                <button class="btn-primary btn-lang" id="lang-switch-desktop">ES / EN</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero container">
+            <div class="hero-content">
+                <h1 data-i18n="hero_title">Find shifts near you in minutes</h1>
+                <p data-i18n="hero_subtitle">Transparent ventilation for productive spaces. Work when you want or cover staff instantly.</p>
+                <div class="hero-btns">
+                    <button class="btn-primary" data-i18n="hero_btn">More Information</button>
+                    <button class="btn-secondary" data-i18n="btn_post">Post a shift</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="public/assets/images/Image.png" alt="ChambeaYA App Interface">
+            </div>
+        </section>
+
+        <!-- Features Bar -->
+        <section class="features-bar">
+            <div class="container flex-row">
+                <div class="feature-item"><span class="icon">📄</span> <span data-i18n="feat_1">No CV needed</span></div>
+                <div class="feature-item"><span class="icon">⚡</span> <span data-i18n="feat_2">Instant response</span></div>
+                <div class="feature-item"><span class="icon">📍</span> <span data-i18n="feat_3">Near you</span></div>
+                <div class="feature-item"><span class="icon">💰</span> <span data-i18n="feat_4">Fast payments</span></div>
+            </div>
+        </section>
+
+        <!-- How it Works -->
+        <section class="how-it-works container">
+            <h2 data-i18n="how_title">How it works</h2>
+            <p class="subtitle" data-i18n="how_subtitle">Three simple steps to connect talent with opportunities.</p>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-icon">👤</div>
+                    <h3 data-i18n="step1_title">1. Sign up</h3>
+                    <p data-i18n="step1_desc">Create your profile in seconds. No endless paperwork or resume required.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">🔍</div>
+                    <h3 data-i18n="step2_title">2. Find or post shifts</h3>
+                    <p data-i18n="step2_desc">Explore nearby opportunities or post your business's staffing needs.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">💼</div>
+                    <h3 data-i18n="step3_title">3. Work or hire instantly</h3>
+                    <p data-i18n="step3_desc">Connect immediately. Complete the shift and manage payments securely and fast.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta container">
+            <div class="cta-box">
+                <h2 data-i18n="testi_cta_title">Unlock your full potential</h2>
+                <p data-i18n="testi_cta_sub">Get full access to exclusive features and remove any barriers. The complete solution for those who don't settle for the basics.</p>
+                <div class="cta-btns">
+                    <button class="btn-primary" data-i18n="cta_btn1">Create account</button>
+                    <button class="btn-primary" data-i18n="cta_btn2">Download app</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container">
+        <div class="footer-top">
+            <div class="footer-logo" data-i18n="footer_slogan">ChambeaYA</div>
+            <div class="footer-links">
+                <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
+                <a href="#" data-i18n="footer_terms">Terms of Service</a>
+                <a href="#" data-i18n="footer_legal">Legal Info</a>
+            </div>
+        </div>
+        <p class="copyright" data-i18n="footer_copy">2026 © ChambeaYA – All rights reserved</p>
+    </footer>
+
+    <script type="module" src="public/assets/scripts/main.js"></script>
+</body>
+</html>
