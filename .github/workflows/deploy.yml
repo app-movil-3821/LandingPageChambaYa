@@ -1,21 +1,21 @@
-# Nombre del flujo de trabajo
+
 name: Deploy static content to Pages
 
 on:
-  # Se ejecuta al hacer push a la rama 'main'
+
   push:
     branches: ["main"]
 
-  # Permite ejecutar este workflow manualmente desde la pestaña Actions
+
   workflow_dispatch:
 
-# Establece los permisos necesarios para GitHub Pages
+
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Solo permite un despliegue a la vez
+
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -24,19 +24,19 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps: deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Pages
-        uses: actions/pages-primer-guide@v1 # Configura el entorno de Pages
+        uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Desplegamos la raíz del proyecto donde está tu index.html
+
           path: '.'
 
       - name: Deploy to GitHub Pages
