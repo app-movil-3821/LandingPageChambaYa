@@ -3,108 +3,378 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChambeaYA - Find shifts near you</title>  
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>ChambeaYA - Find shifts near you</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="public/assets/styles/style.css">
 </head>
 <body>
+
+    <!-- HEADER -->
     <header>
         <nav class="container">
             <div class="logo">ChambeaYA</div>
-            <button class="menu-toggle" id="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
             </button>
             <ul class="nav-links" id="nav-menu">
-                <li><a href="#" data-i18n="nav_home">Home</a></li>
-                <li><a href="#" data-i18n="nav_services">Services</a></li>
-                <li><a href="#" data-i18n="nav_how">How it Works</a></li>
-                <li><a href="#" data-i18n="nav_pricing">Pricing</a></li>
-                <li><a href="#" data-i18n="nav_login">Login</a></li>
-                <li><a href="#" class="btn-primary" data-i18n="nav_get_started">Get Started</a></li>
-                <li><button class="btn-primary btn-lang" id="lang-switch">ES / EN</button></li>
+                <li><a href="#home" data-i18n="nav_home">Home</a></li>
+                <li><a href="#services" data-i18n="nav_services">Services</a></li>
+                <li><a href="#how" data-i18n="nav_how">How it Works</a></li>
+                <li><a href="#pricing" data-i18n="nav_pricing">Pricing</a></li>
+                <li><a href="#about" data-i18n="nav_about">About</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+                <li><a href="#" data-i18n="nav_login" class="nav-login-mobile">Login</a></li>
+                <li><a href="download.html" class="btn-primary" data-i18n="nav_get_started">Get Started</a></li>
+                <li><button class="btn-lang" id="lang-switch">ES / EN</button></li>
             </ul>
             <div class="nav-auth" id="nav-auth-desktop">
                 <a href="#" data-i18n="nav_login">Login</a>
-                <a href="#" class="btn-primary" data-i18n="nav_get_started">Get Started</a>
-                <button class="btn-primary btn-lang" id="lang-switch-desktop">ES / EN</button>
+                <a href="download.html" class="btn-primary" data-i18n="nav_get_started">Get Started</a>
+                <button class="btn-lang" id="lang-switch-desktop">ES / EN</button>
             </div>
         </nav>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero container">
+
+        <!-- HERO -->
+        <section class="hero container" id="home">
             <div class="hero-content">
-                <h1 data-i18n="hero_title">Find shifts near you in minutes</h1>
-                <p data-i18n="hero_subtitle">Transparent ventilation for productive spaces. Work when you want or cover staff instantly.</p>
+                <div class="hero-badge" data-i18n="hero_badge">🚀 Now available in Lima</div>
+                <h1 data-i18n="hero_title">Find shifts near you <span class="highlight">in minutes</span></h1>
+                <p data-i18n="hero_subtitle">Work when you want or cover staff instantly. The fastest platform to connect local businesses with independent workers.</p>
                 <div class="hero-btns">
-                    <button class="btn-primary" data-i18n="hero_btn">More Information</button>
-                    <button class="btn-secondary" data-i18n="btn_post">Post a shift</button>
+                    <a href="download.html" class="btn-primary" data-i18n="hero_btn">Get Started Free</a>
+                    <a href="#how" class="btn-secondary" data-i18n="btn_how">See how it works</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat"><strong>500+</strong><span data-i18n="stat_workers">Workers</span></div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><strong>200+</strong><span data-i18n="stat_businesses">Businesses</span></div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><strong>98%</strong><span data-i18n="stat_satisfaction">Satisfaction</span></div>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="public/assets/images/Image.png" alt="ChambeaYA App Interface">
+                <div class="hero-img-wrapper">
+                    <img src="public/assets/images/Image.png" alt="ChambeaYA App Interface">
+                    <div class="hero-badge-float badge-1">
+                        <span class="badge-icon">⚡</span>
+                        <div><strong data-i18n="badge1_title">Instant match</strong><small data-i18n="badge1_sub">Found in 3 min</small></div>
+                    </div>
+                    <div class="hero-badge-float badge-2">
+                        <span class="badge-icon">💰</span>
+                        <div><strong data-i18n="badge2_title">Fast payment</strong><small data-i18n="badge2_sub">Same day</small></div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Features Bar -->
+        <!-- FEATURES BAR -->
         <section class="features-bar">
             <div class="container flex-row">
-                <div class="feature-item"><span class="icon">📄</span> <span data-i18n="feat_1">No CV needed</span></div>
-                <div class="feature-item"><span class="icon">⚡</span> <span data-i18n="feat_2">Instant response</span></div>
-                <div class="feature-item"><span class="icon">📍</span> <span data-i18n="feat_3">Near you</span></div>
-                <div class="feature-item"><span class="icon">💰</span> <span data-i18n="feat_4">Fast payments</span></div>
+                <div class="feature-item"><span class="icon">📄</span><span data-i18n="feat_1">No CV needed</span></div>
+                <div class="feature-item"><span class="icon">⚡</span><span data-i18n="feat_2">Instant response</span></div>
+                <div class="feature-item"><span class="icon">📍</span><span data-i18n="feat_3">Near you</span></div>
+                <div class="feature-item"><span class="icon">💰</span><span data-i18n="feat_4">Fast payments</span></div>
             </div>
         </section>
 
-        <!-- How it Works -->
-        <section class="how-it-works container">
-            <h2 data-i18n="how_title">How it works</h2>
-            <p class="subtitle" data-i18n="how_subtitle">Three simple steps to connect talent with opportunities.</p>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-icon">👤</div>
-                    <h3 data-i18n="step1_title">1. Sign up</h3>
-                    <p data-i18n="step1_desc">Create your profile in seconds. No endless paperwork or resume required.</p>
+        <!-- SERVICES -->
+        <section class="services container" id="services">
+            <div class="section-label" data-i18n="services_label">Our Services</div>
+            <h2 data-i18n="services_title">Everything you need to <span class="highlight">work or hire</span></h2>
+            <p class="section-subtitle" data-i18n="services_subtitle">Two powerful modes in one app. Whether you're looking for work or need staff now.</p>
+            <div class="services-grid">
+                <div class="service-card service-worker">
+                    <div class="service-icon">👷</div>
+                    <h3 data-i18n="serv1_title">For Workers</h3>
+                    <p data-i18n="serv1_desc">Browse shifts near you, apply in one tap and get paid the same day. No experience needed for many roles.</p>
+                    <ul class="service-list">
+                        <li data-i18n="serv1_f1">✓ Flexible schedule</li>
+                        <li data-i18n="serv1_f2">✓ No CV required</li>
+                        <li data-i18n="serv1_f3">✓ Same-day payment</li>
+                        <li data-i18n="serv1_f4">✓ Rate your employer</li>
+                    </ul>
+                    <a href="download.html" class="btn-outline" data-i18n="serv1_btn">Find shifts →</a>
                 </div>
-                <div class="step-card">
-                    <div class="step-icon">🔍</div>
-                    <h3 data-i18n="step2_title">2. Find or post shifts</h3>
-                    <p data-i18n="step2_desc">Explore nearby opportunities or post your business's staffing needs.</p>
+                <div class="service-card service-business">
+                    <div class="service-badge" data-i18n="popular_badge">Most Popular</div>
+                    <div class="service-icon">🏢</div>
+                    <h3 data-i18n="serv2_title">For Businesses</h3>
+                    <p data-i18n="serv2_desc">Post a shift and receive qualified candidates within minutes. Scale your workforce up or down instantly.</p>
+                    <ul class="service-list">
+                        <li data-i18n="serv2_f1">✓ Post in 2 minutes</li>
+                        <li data-i18n="serv2_f2">✓ Verified workers</li>
+                        <li data-i18n="serv2_f3">✓ Real-time tracking</li>
+                        <li data-i18n="serv2_f4">✓ Manage payroll</li>
+                    </ul>
+                    <a href="download.html" class="btn-primary" data-i18n="serv2_btn">Post a shift →</a>
                 </div>
-                <div class="step-card">
-                    <div class="step-icon">💼</div>
-                    <h3 data-i18n="step3_title">3. Work or hire instantly</h3>
-                    <p data-i18n="step3_desc">Connect immediately. Complete the shift and manage payments securely and fast.</p>
+                <div class="service-card service-premium">
+                    <div class="service-icon">⭐</div>
+                    <h3 data-i18n="serv3_title">Premium Access</h3>
+                    <p data-i18n="serv3_desc">Unlock priority matching, advanced filters, analytics and dedicated support for high-demand operations.</p>
+                    <ul class="service-list">
+                        <li data-i18n="serv3_f1">✓ Priority placement</li>
+                        <li data-i18n="serv3_f2">✓ Advanced analytics</li>
+                        <li data-i18n="serv3_f3">✓ Dedicated support</li>
+                        <li data-i18n="serv3_f4">✓ API access</li>
+                    </ul>
+                    <a href="#pricing" class="btn-outline" data-i18n="serv3_btn">See plans →</a>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
+        <!-- HOW IT WORKS -->
+        <section class="how-it-works" id="how">
+            <div class="container">
+                <div class="section-label" data-i18n="how_label">Process</div>
+                <h2 data-i18n="how_title">How it works</h2>
+                <p class="section-subtitle" data-i18n="how_subtitle">Three simple steps to connect talent with opportunities.</p>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">01</div>
+                        <div class="step-icon">👤</div>
+                        <h3 data-i18n="step1_title">Sign up</h3>
+                        <p data-i18n="step1_desc">Create your profile in seconds. No endless paperwork or resume required.</p>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step-card">
+                        <div class="step-number">02</div>
+                        <div class="step-icon">🔍</div>
+                        <h3 data-i18n="step2_title">Find or post shifts</h3>
+                        <p data-i18n="step2_desc">Explore nearby opportunities or post your business's staffing needs instantly.</p>
+                    </div>
+                    <div class="step-connector"></div>
+                    <div class="step-card">
+                        <div class="step-number">03</div>
+                        <div class="step-icon">💼</div>
+                        <h3 data-i18n="step3_title">Work or hire instantly</h3>
+                        <p data-i18n="step3_desc">Connect immediately. Complete the shift and manage payments securely and fast.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING -->
+        <section class="pricing container" id="pricing">
+            <div class="section-label" data-i18n="pricing_label">Pricing</div>
+            <h2 data-i18n="pricing_title">Simple, transparent pricing</h2>
+            <p class="section-subtitle" data-i18n="pricing_subtitle">No hidden fees. Start free and scale as you grow.</p>
+            <div class="pricing-toggle">
+                <span data-i18n="toggle_worker">Worker</span>
+                <button class="toggle-btn" id="pricing-toggle" aria-pressed="false"></button>
+                <span data-i18n="toggle_business">Business</span>
+            </div>
+            <div class="pricing-grid" id="pricing-grid">
+                <!-- Worker plans shown by default -->
+                <div class="pricing-card" id="plan-free">
+                    <div class="plan-name" data-i18n="plan_free">Free</div>
+                    <div class="plan-price"><span class="price-amount">S/ 0</span><span class="price-period" data-i18n="per_month">/month</span></div>
+                    <p class="plan-desc" data-i18n="plan_free_desc">Everything you need to start working today.</p>
+                    <ul class="plan-features">
+                        <li data-i18n="free_f1">✓ Browse all shifts</li>
+                        <li data-i18n="free_f2">✓ Apply to 5 shifts/month</li>
+                        <li data-i18n="free_f3">✓ Basic profile</li>
+                        <li data-i18n="free_f4">✓ Standard payment (3 days)</li>
+                        <li class="disabled" data-i18n="free_f5">✗ Priority applications</li>
+                        <li class="disabled" data-i18n="free_f6">✗ Advanced filters</li>
+                    </ul>
+                    <a href="download.html" class="btn-outline" data-i18n="plan_cta_free">Start Free</a>
+                </div>
+                <div class="pricing-card featured" id="plan-pro">
+                    <div class="plan-badge" data-i18n="recommended">Recommended</div>
+                    <div class="plan-name" data-i18n="plan_pro">Pro</div>
+                    <div class="plan-price"><span class="price-amount">S/ 29</span><span class="price-period" data-i18n="per_month">/month</span></div>
+                    <p class="plan-desc" data-i18n="plan_pro_desc">For serious workers who want maximum opportunities.</p>
+                    <ul class="plan-features">
+                        <li data-i18n="pro_f1">✓ Unlimited applications</li>
+                        <li data-i18n="pro_f2">✓ Priority matching</li>
+                        <li data-i18n="pro_f3">✓ Verified badge</li>
+                        <li data-i18n="pro_f4">✓ Same-day payment</li>
+                        <li data-i18n="pro_f5">✓ Advanced filters</li>
+                        <li data-i18n="pro_f6">✓ 24/7 support</li>
+                    </ul>
+                    <a href="download.html" class="btn-primary" data-i18n="plan_cta_pro">Get Pro</a>
+                </div>
+                <div class="pricing-card" id="plan-enterprise">
+                    <div class="plan-name" data-i18n="plan_enterprise">Enterprise</div>
+                    <div class="plan-price"><span class="price-amount" data-i18n="custom_price">Custom</span></div>
+                    <p class="plan-desc" data-i18n="plan_ent_desc">For agencies and high-volume operations.</p>
+                    <ul class="plan-features">
+                        <li data-i18n="ent_f1">✓ Everything in Pro</li>
+                        <li data-i18n="ent_f2">✓ Dedicated account manager</li>
+                        <li data-i18n="ent_f3">✓ Custom integrations</li>
+                        <li data-i18n="ent_f4">✓ SLA guarantee</li>
+                        <li data-i18n="ent_f5">✓ Analytics dashboard</li>
+                        <li data-i18n="ent_f6">✓ API access</li>
+                    </ul>
+                    <a href="#contact" class="btn-outline" data-i18n="plan_cta_ent">Contact Sales</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about" id="about">
+            <div class="container about-inner">
+                <div class="about-image">
+                    <div class="about-img-block">
+                        <div class="about-stat-card">
+                            <strong>2024</strong>
+                            <span data-i18n="about_founded">Founded</span>
+                        </div>
+                        <div class="about-stat-card">
+                            <strong>Lima</strong>
+                            <span data-i18n="about_hq">Headquarters</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="section-label" data-i18n="about_label">About Us</div>
+                    <h2 data-i18n="about_title">We're changing how <span class="highlight">work happens</span> in Latin America</h2>
+                    <p data-i18n="about_p1">ChambeaYA was born from a simple frustration: finding short-term work in Lima was slow, opaque and full of friction. We built the solution we wished existed.</p>
+                    <p data-i18n="about_p2">Our mission is to democratize flexible work — giving every person the freedom to earn on their terms, and every business the agility to scale their workforce in real time.</p>
+                    <div class="about-values">
+                        <div class="value-item">
+                            <span class="value-icon">🤝</span>
+                            <div>
+                                <strong data-i18n="val1_title">Trust first</strong>
+                                <p data-i18n="val1_desc">Verified profiles, transparent ratings</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-icon">⚡</span>
+                            <div>
+                                <strong data-i18n="val2_title">Speed matters</strong>
+                                <p data-i18n="val2_desc">Matches in minutes, payments same day</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <span class="value-icon">🌎</span>
+                            <div>
+                                <strong data-i18n="val3_title">Built for LATAM</strong>
+                                <p data-i18n="val3_desc">Designed for local realities</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact container" id="contact">
+            <div class="section-label" data-i18n="contact_label">Contact</div>
+            <h2 data-i18n="contact_title">Get in touch</h2>
+            <p class="section-subtitle" data-i18n="contact_subtitle">Have questions? We'd love to hear from you. Send us a message and we'll respond within 24 hours.</p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <strong data-i18n="contact_email_label">Email</strong>
+                            <p>hola@chambeaya.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <div>
+                            <strong data-i18n="contact_phone_label">WhatsApp</strong>
+                            <p>+51 999 000 000</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <strong data-i18n="contact_location_label">Location</strong>
+                            <p data-i18n="contact_location">Lima, Perú</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-i18n="form_name">Full name</label>
+                            <input type="text" id="form-name" data-i18n-placeholder="form_name_ph" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="form_email">Email</label>
+                            <input type="email" id="form-email" data-i18n-placeholder="form_email_ph" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="form_subject">Subject</label>
+                        <select id="form-subject">
+                            <option value="" data-i18n="form_subject_default">Select a topic...</option>
+                            <option value="worker" data-i18n="form_sub_worker">I'm looking for work</option>
+                            <option value="business" data-i18n="form_sub_biz">I need staff</option>
+                            <option value="support" data-i18n="form_sub_support">Support</option>
+                            <option value="other" data-i18n="form_sub_other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="form_message">Message</label>
+                        <textarea id="form-message" rows="4" data-i18n-placeholder="form_msg_ph" placeholder="How can we help you?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" data-i18n="form_send">Send message</button>
+                    <div class="form-success" id="form-success" data-i18n="form_success_msg">✓ Message sent! We'll get back to you soon.</div>
+                </form>
+            </div>
+        </section>
+
+        <!-- CTA BOTTOM -->
         <section class="cta container">
             <div class="cta-box">
-                <h2 data-i18n="testi_cta_title">Unlock your full potential</h2>
-                <p data-i18n="testi_cta_sub">Get full access to exclusive features and remove any barriers. The complete solution for those who don't settle for the basics.</p>
+                <h2 data-i18n="testi_cta_title">Ready to start chambeando?</h2>
+                <p data-i18n="testi_cta_sub">Join thousands already using ChambeaYA. Download the app and find your next shift today.</p>
                 <div class="cta-btns">
-                    <button class="btn-primary" data-i18n="cta_btn1">Create account</button>
-                    <button class="btn-primary" data-i18n="cta_btn2">Download app</button>
+                    <a href="download.html" class="btn-white" data-i18n="cta_btn1">Create account</a>
+                    <a href="download.html" class="btn-outline-white" data-i18n="cta_btn2">Download app</a>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <footer class="container">
-        <div class="footer-top">
-            <div class="footer-logo" data-i18n="footer_slogan">ChambeaYA</div>
-            <div class="footer-links">
-                <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
-                <a href="#" data-i18n="footer_terms">Terms of Service</a>
-                <a href="#" data-i18n="footer_legal">Legal Info</a>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-logo">ChambeaYA</div>
+                    <p class="footer-tagline" data-i18n="footer_tagline">Work. Hire. Repeat.</p>
+                </div>
+                <div class="footer-nav">
+                    <div class="footer-col">
+                        <strong data-i18n="footer_col1">Product</strong>
+                        <a href="#services" data-i18n="nav_services">Services</a>
+                        <a href="#how" data-i18n="nav_how">How it Works</a>
+                        <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
+                        <a href="download.html" data-i18n="footer_download">Download App</a>
+                    </div>
+                    <div class="footer-col">
+                        <strong data-i18n="footer_col2">Company</strong>
+                        <a href="#about" data-i18n="nav_about">About</a>
+                        <a href="#contact" data-i18n="nav_contact">Contact</a>
+                        <a href="#" data-i18n="footer_blog">Blog</a>
+                    </div>
+                    <div class="footer-col">
+                        <strong data-i18n="footer_col3">Legal</strong>
+                        <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
+                        <a href="#" data-i18n="footer_terms">Terms of Service</a>
+                        <a href="#" data-i18n="footer_legal">Legal Info</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright" data-i18n="footer_copy">2026 © ChambeaYA – All rights reserved</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Instagram">📸</a>
+                    <a href="#" aria-label="LinkedIn">💼</a>
+                    <a href="#" aria-label="WhatsApp">💬</a>
+                </div>
             </div>
         </div>
-        <p class="copyright" data-i18n="footer_copy">2026 © ChambeaYA – All rights reserved</p>
     </footer>
 
     <script type="module" src="public/assets/scripts/main.js"></script>
